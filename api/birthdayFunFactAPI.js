@@ -3,7 +3,7 @@ module.exports = async (req, res) => {
   const axios = require("axios");
 
   // Setting the OpenAI API key (Note: This should ideally be stored securely)
-  const OPENAI_API_KEY = "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";
+  const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
   // Extracting the date from the request body
   const date = req.body.date;
