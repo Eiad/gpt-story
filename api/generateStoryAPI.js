@@ -3,7 +3,7 @@ module.exports = async (req, res) => {
   const axios = require("axios");
 
   // Setting the OpenAI API key (Note: This should ideally be stored securely)
-  const OPENAI_API_KEY = "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";
+  const OPENAI_API_KEY = "";
 
   // Extracting the keywords from the request body
   const keywords = req.body.keywords;
