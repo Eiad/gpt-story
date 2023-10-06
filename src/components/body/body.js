@@ -7,12 +7,16 @@ import SuggestTravelLocation from "./SuggestTravelLocation/suggestTravelLocation
 function Body(props) {
   return (
     <div className="body">
-      <GenerateStory onStoryGenerated={props.onStoryGenerated} />
-      <BirthdayFunFact />
-      <SuggestMeMusicGpt />
-      <SuggestTravelLocation
-        onlocationSuggestions={props.onlocationSuggestions}
-      />
+      {props.selectedTab === "GenerateStory" && (
+        <GenerateStory onStoryGenerated={props.onStoryGenerated} />
+      )}
+      {props.selectedTab === "BirthdayFunFact" && <BirthdayFunFact />}
+      {props.selectedTab === "SuggestMeMusicGpt" && <SuggestMeMusicGpt />}
+      {props.selectedTab === "SuggestTravelLocation" && (
+        <SuggestTravelLocation
+          onlocationSuggestions={props.onlocationSuggestions}
+        />
+      )}
     </div>
   );
 }

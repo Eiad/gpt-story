@@ -9,16 +9,24 @@ function Header(props) {
       <div className="nav-container">
         <ul className="nav-items">
           <li>
-            <a href="#">Generate Story</a>
+            <button onClick={() => props.onChangeTab("GenerateStory")}>
+              Generate Story
+            </button>
           </li>
           <li>
-            <a href="#">Birthday Fun Fact</a>
+            <button onClick={() => props.onChangeTab("BirthdayFunFact")}>
+              Birthday Fun Fact
+            </button>
           </li>
           <li>
-            <a href="#">Suggest Me Music</a>
+            <button onClick={() => props.onChangeTab("SuggestMeMusicGpt")}>
+              Suggest Me Music
+            </button>
           </li>
           <li>
-            <a href="#">Suggest Me Music</a>
+            <button onClick={() => props.onChangeTab("SuggestTravelLocation")}>
+              Suggest Travel Location
+            </button>
           </li>
         </ul>
       </div>

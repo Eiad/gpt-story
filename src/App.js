@@ -1,12 +1,12 @@
-// Import necessary components and styles
-import React from "react";
+import React, { useState } from "react";
 import "./styles/main-styles.css";
 import Header from "./components/header/header";
 import Body from "./components/body/body";
 import Footer from "./components/footer/footer";
 
-// Define function to handle generated stories
 function App() {
+  const [selectedTab, setSelectedTab] = useState("GenerateStory");
+
   const onStoryGenerated = (story) => {
     console.log("A new story was generated:", story);
   };
@@ -15,13 +15,17 @@ function App() {
     console.log("A new travel was generated:", locationSuggestions);
   };
 
-  // Render components and pass props
   return (
     <section className="App">
-      <Header title="GPT Story Generator" desc="Have fun on your OWn!" />
+      <Header
+        title="GPT Story Generator"
+        desc="Have fun on your own!"
+        onChangeTab={(tabName) => setSelectedTab(tabName)}
+      />
       <Body
         onStoryGenerated={onStoryGenerated}
         onlocationSuggestions={onlocationSuggestions}
+        selectedTab={selectedTab}
       />
       <Footer />
     </section>

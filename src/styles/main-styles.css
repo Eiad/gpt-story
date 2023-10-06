@@ -7,3 +7,28 @@ body {
 .title {
   color: blue;
 }
+
+ul.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+}
+
+ul.nav-items button {
+  transition: ease-in-out;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  background: #595fff;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+ul.nav-items button:hover,
+ul.nav-items button:active {
+  background: #454ac8;
+  color: #ffffff;
+}
