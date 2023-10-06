@@ -2,11 +2,13 @@ const axios = require("axios"); // Importing axios to make HTTP requests
 
 // Setting the OpenAI API key
 // (It's recommended to store this securely using environment variables)
+//const OPENAI_API_KEY = "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";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 module.exports = async (req, res) => {
   // Extracting the musical preference or mood from the incoming request body
   const preference = req.body.mood;
+  const promptValue = `Given the musical mood preference "${preference}", suggest 5 songs or music tracks and add their youtube links.`;
 
   // Specifying the endpoint for the OpenAI GPT-3.5 Turbo Instruct API
   const endpoint =
@@ -21,7 +23,7 @@ module.exports = async (req, res) => {
   // Preparing the data payload for the HTTP request
   const data = {
     // The prompt instructs GPT to suggest 10 songs based on the given mood
-    prompt: `Given the musical preference "${preference}", suggest 10 songs or music tracks.`,
+    prompt: promptValue,
     temperature: 0.7, // Controls randomness: higher values make output more random
     max_tokens: 200, // Maximum number of tokens (words) in the response
   };

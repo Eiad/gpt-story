@@ -1,7 +1,7 @@
 import React, { useState } from "react"; // Importing React and useState hook
 import axios from "axios"; // Importing axios to make HTTP requests
 
-function SuggestMeGpt() {
+function SuggestMeMusicGpt() {
   // State to hold the mood input value
   const [mood, setMood] = useState("");
   // State to hold the list of music suggestions
@@ -9,12 +9,10 @@ function SuggestMeGpt() {
 
   const handleMusicSuggestion = async () => {
     try {
-      console.log("Mood:", mood);
-
       // Making a POST request to the backend to get music suggestions
-      const response = await axios.post("/api/SuggestMeGptAPI", { mood: mood });
-
-      console.log("API Response:", response);
+      const response = await axios.post("/api/SuggestMeMusicGptAPI", {
+        mood: mood,
+      });
       // Updating the state with the received list of music suggestions
       setSuggestions(response.data);
     } catch (error) {
@@ -48,4 +46,4 @@ function SuggestMeGpt() {
   );
 }
 
-export default SuggestMeGpt;
+export default SuggestMeMusicGpt;
