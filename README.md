@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# GPT Story Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project uses OpenAI's GPT-3 API to generate stories, fun facts, music suggestions and travel location suggestions based on user input.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started, you'll need an API key for OpenAI's GPT-3 API. Sign up for an OpenAI account and generate an API key.
 
-### `npm start`
+Then, create a .env file in the root directory and add your API key:
+OPENAI_API_KEY=YOUR_API_KEY
+Install the dependencies:
+npm install
+Run the app:
+npm start
+The app will be served at http://localhost:3000.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Available Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The app has the following main features:
 
-### `npm test`
+### Generate Story
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Enter a few keywords and GPT-3 will generate a short story based on those keywords.
 
-### `npm run build`
+### Birthday Fun Fact
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Enter a date and GPT-3 will generate an interesting fun fact about that date.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Suggest Me Music
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Enter your mood or musical preference and GPT-3 will suggest some songs or music tracks.
 
-### `npm run eject`
+### Suggest Travel Location
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Enter a keyword and GPT-3 will suggest some travel locations related to that keyword.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How it Works
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The frontend is built using React and the backend uses Express. The frontend makes API calls to the backend, which in turn makes requests to OpenAI's GPT-3 API using the Axios library.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The responses from the GPT-3 API are returned to the frontend and displayed to the user.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! Feel free to open an issue or submit a pull request.
