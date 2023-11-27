@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
 
   // Constructing the data for the HTTP request
   const data = {
-    //prompt: `Based on the provided keywords (${keywords}), create a cute story suitable for a 5-year-old child. The story should not exceed 12 words. Ensure the story is in the same language as the keywords.`,
+    //prompt: `Based on the provided keywords (${keywords}), create a cute story suitable for a 5-year-old child. The story should not exceed 12 words. Ensure the story is in the same languages as the keywords.`,
     prompt: `give a fun fact using this keywords (${keywords}). make it short should not exceed 12 words. Ensure the story is in the same language as the keywords.`,
     temperature: 0,
     max_tokens: 120,
