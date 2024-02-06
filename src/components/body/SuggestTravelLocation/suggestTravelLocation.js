@@ -29,7 +29,7 @@ function SuggestTravelLocation(props) {
         Suggest Travel Location
       </button>
       <h3>Suggested locations:</h3>
-      <ul>
+      <ul className="result-list">
         {suggestions.map((suggestion, index) => (
           <li key={index}>{suggestion}</li>
         ))}
