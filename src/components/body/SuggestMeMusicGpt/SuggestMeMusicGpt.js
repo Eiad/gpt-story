@@ -18,7 +18,7 @@ function SuggestMeMusicGpt() {
     } catch (error) {
       // Handling errors and updating the state with an error message
       console.error("Error:", error);
-      setSuggestions(["Sorry, an error occurred. Please try again."]);
+      setSuggestions(["Sorry, an error occurred. Or i probably disabled the API calls as it costs - Please try again or contact me on Github ;)."]);
     }
   };
 
