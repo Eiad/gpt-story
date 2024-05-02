@@ -14,7 +14,7 @@ function SuggestTravelLocation(props) {
       props.onlocationSuggestions(response.data); // Notify the parent component
     } catch (error) {
       console.error("Error:", error);
-      setSuggestions(["Sorry, an error occurred. Please try again."]);
+      setSuggestions(["Sorry, an error occurred. Or i probably disabled the API calls as it costs - Please try again or contact me on Github ;)."]);
     }
   };
 
