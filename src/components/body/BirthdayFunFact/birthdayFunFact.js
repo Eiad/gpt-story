@@ -14,7 +14,7 @@ function BirthdayFunFact() {
       setStoryDate(response.data);
     } catch (error) {
       console.error("Error:", error);
-      setStoryDate("Sorry, an error occurred. Please try again.");
+      setStoryDate("Sorry, an error occurred. Or i probably disabled the API calls as it costs - Please try again or contact me on Github ;).");
     }
   };
 
